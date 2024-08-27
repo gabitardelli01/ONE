@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="logo.png" alt="Logotipo" class="logo">
+            <h1>Resultado</h1>
+        </header>
+        <div class="content">
+            <div class="output-section">
+                <textarea id="outputText" readonly></textarea>
+            </div>
+        </div>
+        <div class="history-box">
+            <h2>Histórico</h2>
+            <ul id="history"></ul>
+        </div>
+    </div>
+    <script>
+        document.getElementById('outputText').value = localStorage.getItem('resultText');
+        document.getElementById('history').innerHTML = localStorage.getItem('history');
+    </script>
+</body>
+</html>
